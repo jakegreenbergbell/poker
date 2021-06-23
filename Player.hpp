@@ -9,15 +9,18 @@
 #define Player_hpp
 
 #include "Card.hpp"
+#include <vector>
 
 class Player{
 public:
     Player();
     void dealHand(Card card1, Card card2);
     int getHand();
+    Card getFirstCard() const;
+    Card getSecondCard() const;
     
 private:
-    Card hand[2];
+    std::vector<Card> hand;
     
 };
 

@@ -30,12 +30,13 @@ public:
     
     // useful functions
     Player findWinner();
-    void showCards();
-    
+    void createDeck();
+    void showHands() const;
+    void showCommunal() const;
     
 private:
     std::stack<Card> deck;
-    std::list<Card> communal;
+    std::vector<Card> communal;
     // why vector? players won't need to be removed and added frequently, but will need to be accessed quickly
     // this means run time is optimized
     std::vector<Player> players;

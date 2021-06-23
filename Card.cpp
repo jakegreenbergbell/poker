@@ -18,10 +18,15 @@ Card::Card(int n, int s){
     suit = s;
 }
 
-int Card::getNumber(){
+int Card::getNumber() const{
     return number;
 }
 
-int Card::getSuit(){
+int Card::getSuit() const{
     return suit;
 }
+
+bool Card::operator==(const Card& other){
+    return (suit == other.getSuit() && number == other.getNumber());
+}
+

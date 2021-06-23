@@ -30,7 +30,11 @@
 
 int main() {
     Game play = Game();
-//    play.dealCards();
-//    play.showCards();
+    play.dealCards();
+    play.showHands();
+    play.flop();
+    play.turn();
+    play.river();
+    play.showCommunal();
     return 0;
 }

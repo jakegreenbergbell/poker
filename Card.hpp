@@ -13,8 +13,10 @@ public:
     Card();
     Card(int n, int s);
     
-    int getNumber();
-    int getSuit();
+    int getNumber() const;
+    int getSuit() const;
+    
+    bool operator==(const Card&);
     
 private:
     int number;
